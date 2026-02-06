@@ -9,8 +9,6 @@ import Market from './pages/Market';
 import Programs from './pages/Programs';
 import About from './pages/About';
 import Admin from './pages/Admin';
-// Correct import matching the exact filename casing
-import AppInstallPrompt from './components/AppInstallPrompt';
 import { RADIO_STREAM_URL } from './constants';
 import { DataProvider } from './context/DataContext';
 
@@ -79,7 +77,8 @@ const App: React.FC = () => {
     }
 
     return () => {
-      // Cleanup if needed
+      // Cleanup if needed, though we want persistent audio usually.
+      // In this specific structure, component unmounts only on full page refresh.
     };
   }, [isPlaying]);
 
@@ -95,7 +94,6 @@ const App: React.FC = () => {
 
   return (
     <DataProvider>
-      <AppInstallPrompt />
       <HashRouter>
         <Routes>
           <Route 

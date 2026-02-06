@@ -4,8 +4,7 @@ export const WHATSAPP_LINK = `https://wa.me/233546796226`;
 export const RADIO_STREAM_URL = "https://stream.zeno.fm/fpbcpj2u6rfuv";
 export const SERVICES_BANNER_URL = "https://i.postimg.cc/d0SBCc8G/Whats-App-Image-2026-02-06-at-06-23-14.jpg";
 export const RADIO_BACKGROUND_URL = "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?q=80&w=2000&auto=format&fit=crop";
-// Updated to a generated professional monogram logo (Adonai Radio -> AR) matching the primary theme color
-export const APP_LOGO_URL = "https://ui-avatars.com/api/?name=Adonai+Radio&background=7c3aed&color=fff&size=512&bold=true&length=2&font-size=0.35";
+export const APP_LOGO_URL = "https://i.postimg.cc/NFyRmd6s/Whats_App_Image_2026_02_06_at_06_23_15.jpg";
 
 export const BIBLE_VERSES = [
   { text: "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope.", reference: "Jeremiah 29:11" },
