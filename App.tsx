@@ -9,7 +9,6 @@ import Market from './pages/Market';
 import Programs from './pages/Programs';
 import About from './pages/About';
 import Admin from './pages/Admin';
-// Correct import path matching the file name case-sensitively
 import AppInstallPrompt from './components/AppInstallPrompt';
 import { RADIO_STREAM_URL } from './constants';
 import { DataProvider } from './context/DataContext';
