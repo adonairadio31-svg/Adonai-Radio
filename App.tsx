@@ -9,7 +9,7 @@ import Market from './pages/Market';
 import Programs from './pages/Programs';
 import About from './pages/About';
 import Admin from './pages/Admin';
-import PWAInstallPrompt from './components/PWAInstallPrompt';
+import InstallPrompt from './components/InstallPrompt';
 import { RADIO_STREAM_URL } from './constants';
 import { DataProvider } from './context/DataContext';
 
@@ -95,7 +95,7 @@ const App: React.FC = () => {
 
   return (
     <DataProvider>
-      <PWAInstallPrompt />
+      <InstallPrompt />
       <HashRouter>
         <Routes>
           <Route 
