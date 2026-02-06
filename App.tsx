@@ -78,8 +78,7 @@ const App: React.FC = () => {
     }
 
     return () => {
-      // Cleanup if needed, though we want persistent audio usually.
-      // In this specific structure, component unmounts only on full page refresh.
+      // Cleanup if needed
     };
   }, [isPlaying]);
 
