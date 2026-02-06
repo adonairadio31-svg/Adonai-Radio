@@ -11,7 +11,7 @@ import About from './pages/About';
 import Admin from './pages/Admin';
 import { RADIO_STREAM_URL } from './constants';
 import { DataProvider } from './context/DataContext';
-import PWAInstallPrompt from './components/PWAInstallPrompt';
+import InstallPrompt from './components/InstallPrompt';
 
 const App: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -95,7 +95,7 @@ const App: React.FC = () => {
 
   return (
     <DataProvider>
-      <PWAInstallPrompt />
+      <InstallPrompt />
       <HashRouter>
         <Routes>
           <Route 
