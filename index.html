@@ -6,8 +6,9 @@
     <title>Adonai Radio</title>
     
     <!-- PWA Meta Tags -->
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="./manifest.json" />
     <meta name="theme-color" content="#8b5cf6" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Adonai Radio" />
@@ -65,8 +66,8 @@
         scrollbar-width: none;
       }
       body {
-        /* background-color handled by Layout for dark mode support */
-        overscroll-behavior-y: none; /* Prevent pull-to-refresh on mobile */
+        overscroll-behavior-y: none;
+        -webkit-tap-highlight-color: transparent;
       }
     </style>
   <script type="importmap">
@@ -83,7 +84,7 @@
   }
 }
 </script>
-<!-- PWA Install Prompt Capture -->
+<!-- PWA Install Prompt Global Capture -->
 <script>
   window.deferredPrompt = null;
   window.addEventListener('beforeinstallprompt', (e) => {
@@ -91,6 +92,14 @@
     e.preventDefault();
     // Stash the event so it can be triggered later.
     window.deferredPrompt = e;
+    console.log('beforeinstallprompt event was fired and captured.');
+    // Notify the app that the prompt is available
+    window.dispatchEvent(new CustomEvent('pwa-install-ready'));
+  });
+
+  window.addEventListener('appinstalled', (evt) => {
+    console.log('App was installed');
+    window.deferredPrompt = null;
   });
 </script>
 <link rel="stylesheet" href="/index.css">
