@@ -2,8 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Adonai Radio</title>
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#8b5cf6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Adonai Radio" />
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/NFyRmd6s/Whats_App_Image_2026_02_06_at_06_23_15.jpg" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
@@ -57,6 +66,7 @@
       }
       body {
         /* background-color handled by Layout for dark mode support */
+        overscroll-behavior-y: none; /* Prevent pull-to-refresh on mobile */
       }
     </style>
   <script type="importmap">
@@ -69,10 +79,19 @@
     "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
     "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.95.3",
     "vite": "https://esm.sh/vite@^7.3.1",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3",
-    "vite-plugin-pwa": "https://esm.sh/vite-plugin-pwa@^1.2.0"
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3"
   }
 }
+</script>
+<!-- PWA Install Prompt Capture -->
+<script>
+  window.deferredPrompt = null;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent the mini-infobar from appearing on mobile
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    window.deferredPrompt = e;
+  });
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>

@@ -9,7 +9,7 @@ import Market from './pages/Market';
 import Programs from './pages/Programs';
 import About from './pages/About';
 import Admin from './pages/Admin';
-import { RADIO_STREAM_URL } from './constants';
+import { RADIO_STREAM_URL, APP_LOGO_URL } from './constants';
 import { DataProvider } from './context/DataContext';
 
 const App: React.FC = () => {
@@ -36,10 +36,10 @@ const App: React.FC = () => {
         artist: 'The Heartbeat of the City',
         album: 'Live Stream',
         artwork: [
-          { src: 'https://cdn-icons-png.flaticon.com/512/8201/8201777.png', sizes: '96x96', type: 'image/png' },
-          { src: 'https://cdn-icons-png.flaticon.com/512/8201/8201777.png', sizes: '128x128', type: 'image/png' },
-          { src: 'https://cdn-icons-png.flaticon.com/512/8201/8201777.png', sizes: '192x192', type: 'image/png' },
-          { src: 'https://cdn-icons-png.flaticon.com/512/8201/8201777.png', sizes: '512x512', type: 'image/png' },
+          { src: APP_LOGO_URL, sizes: '96x96', type: 'image/jpeg' },
+          { src: APP_LOGO_URL, sizes: '128x128', type: 'image/jpeg' },
+          { src: APP_LOGO_URL, sizes: '192x192', type: 'image/jpeg' },
+          { src: APP_LOGO_URL, sizes: '512x512', type: 'image/jpeg' },
         ]
       });
 
